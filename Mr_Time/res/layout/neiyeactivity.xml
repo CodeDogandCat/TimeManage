@@ -1,0 +1,318 @@
+
+<com.example.mr_time.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+   >
+
+
+
+   
+        <!-- 第一页 -->
+      <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="50dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#00ccff"
+        android:visibility="invisible" 
+        
+       >
+
+       <ImageView
+             android:id="@+id/dayButton"
+             android:layout_width="50dip"
+        	 android:layout_height="50dip"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openDayActivity"
+        	android:src="@drawable/day"
+             >
+           
+        </ImageView>
+         <ImageView
+             android:id="@+id/weekButton"
+             android:layout_width="50dip"
+        	 android:layout_height="50dip"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openWeekActivity"
+        	android:src="@drawable/week"
+        	android:layout_below="@id/dayButton"
+             >
+           
+        </ImageView>
+         <ImageView
+             android:id="@+id/monthButton"
+             android:layout_width="50dip"
+        	 android:layout_height="50dip"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openMonthActivity"
+        	android:src="@drawable/month"
+           android:layout_below="@id/weekButton"
+             >
+           
+        </ImageView>
+        <ImageView
+             android:id="@+id/setting"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openSetting"
+        	android:src="@drawable/settingimage"
+            android:layout_below="@id/monthButton"
+            >
+       
+       </ImageView>
+       <ImageView
+             android:id="@+id/exit_image"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="exitApp"
+        	android:src="@drawable/exit"
+        	 android:layout_below="@id/setting"
+           
+          ></ImageView>
+       
+          <ImageView
+             android:id="@+id/blank1"
+             android:layout_width="50dp"
+        	 android:layout_height="150dp"
+        	 android:layout_alignParentLeft="true"
+        
+        	 android:layout_below="@id/exit_image"
+           
+          > </ImageView>
+       
+        <Button
+           android:id="@+id/more1"
+           android:layout_below="@id/blank1"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:layout_marginTop="100dp"
+           android:background="#00ccff"
+           android:text="MORE"
+           android:onClick="OpenMore"
+           android:textColor="#FFFFFF"
+           android:textSize="12sp"
+           android:textStyle="normal|bold" />
+      
+       
+       
+            
+       
+    </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="320dp"
+             android:layout_height="fill_parent"
+            android:orientation="vertical" 
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_2"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/menuButton"
+                   android:layout_width="35dp"
+                  android:layout_height="34dp"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginTop="3dp"
+                  android:background="@drawable/menu"
+                 
+                  android:paddingLeft="7dp"
+                  android:paddingTop="2dp"  />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="13dp"
+                    android:text="Saturday"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="96dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="0dp"
+                    android:paddingRight="6dp"
+                    android:paddingTop="13dp"
+                    android:text="2015/2/15"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        
+            <LinearLayout
+                android:layout_width="320dip"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal" 
+                 android:id="@+id/mainRelativeLayout"
+               
+                >
+
+                <ListView
+                    android:id="@+id/contentList"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:divider="#FFFFFF"
+                    android:listSelector="#00000000"
+                    android:scrollbars="none" >
+
+                </ListView>
+            
+                 <LinearLayout
+                     android:id="@+id/GalleryRelativeLayout"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginRight="0dp"
+                     android:layout_weight="1.8"
+                     android:orientation="vertical"
+                     android:paddingRight="0dp" >
+
+                     <Gallery
+                         android:id="@+id/gallery1"
+                         android:layout_width="96dp"
+                         android:layout_height="0dp"
+                         android:layout_weight="0.28"
+                         android:layout_marginLeft="25dp"
+                         android:layout_marginTop="12dp"
+                         android:gravity="center_vertical|center_horizontal"
+                         android:spacing="0dp" />
+
+                     <Gallery
+                         android:id="@+id/gallery2"
+                         android:layout_width="96dp"
+                         android:layout_height="0dp"
+                         android:layout_weight="0.294"
+                         android:layout_marginLeft="25dp"
+                         android:layout_marginTop="0dp"
+                         android:gravity="center_vertical|center_horizontal"
+                         android:spacing="0dp" />
+
+                     <Gallery
+                         android:id="@+id/gallery3"
+                         android:layout_width="96dp"
+                         android:layout_height="0dp"
+                         android:layout_weight="0.3"
+                         android:layout_marginLeft="25dp"
+                         android:layout_marginTop="0dp"
+                         android:gravity="center_vertical|center_horizontal"
+                         android:spacing="0dp" />
+
+                     <Gallery
+                         android:id="@+id/gallery4"
+                         android:layout_width="96dp"
+                         android:layout_height="0dp"
+                         android:layout_weight="0.3"
+                         android:layout_marginLeft="25dp"
+                         android:layout_marginTop="0dp"
+                         android:gravity="center_vertical|center_horizontal"
+                         android:spacing="0dp" />
+
+                     <Gallery
+                         android:id="@+id/gallery5"
+                         android:layout_width="96dp"
+                         android:layout_height="0dp"
+                         android:layout_weight="0.3"
+                         android:layout_marginLeft="25dp"
+                         android:layout_marginTop="0dp"
+                         android:gravity="center_vertical|center_horizontal"
+                         android:spacing="0dp" />
+
+                     <Gallery
+                         android:id="@+id/gallery6"
+                         android:layout_width="96dp"
+                         android:layout_height="0dp"
+                         android:layout_weight="0.3"
+                         android:layout_marginLeft="25dp"
+                         android:layout_marginTop="-1.5dp"
+                         android:gravity="center_vertical|center_horizontal"
+                         android:spacing="0dp" />
+                     
+                      </LinearLayout>
+
+                    
+                 
+                 </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/NextLinearLayout"
+                      android:layout_width="320dp"
+                      android:layout_height="0dp"
+                      android:layout_marginTop="0dp"
+                      android:visibility="visible"
+                      android:layout_weight="0.8"
+                      android:orientation="horizontal" >
+ 				
+                   <ImageView
+                       android:id="@+id/imageView1"
+                       android:layout_width="173dp"
+                       android:layout_height="25dp"
+                       android:layout_marginLeft="222dp"
+                       android:onClick="opennextpage"
+                       android:src="@drawable/leftarrow" />
+                      
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/openHelpLinearLayout"
+                      android:layout_width="320dp"
+                      android:layout_height="0dp"
+                      android:layout_weight="1"
+                      android:layout_marginTop="0dp"
+                      android:visibility="visible"
+                      android:orientation="horizontal"  >
+						<ImageView
+                         
+                          android:layout_width="0dp"
+                          android:layout_height="38dp"
+                          android:layout_weight="1.5"
+                         
+                          />
+                      <ImageView
+                          android:id="@+id/imageButton2"
+                          android:layout_width="0dp"
+                          android:layout_height="38dp"
+                          android:layout_weight="2"
+                          android:onClick="openHelp"
+                          android:src="@drawable/help" />
+                      <ImageView
+                          
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="38dp" />
+                      
+
+            </LinearLayout>
+           
+                 
+			
+       
+        </LinearLayout>
+
+                 
+                   
+                     
+            
+
+
+
+
+</com.example.mr_time.SlidingLayout>

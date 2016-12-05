@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mr_time"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+     <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.example.mr_time" />
+	 <uses-permission android:name="android.permission.VIBRATE"></uses-permission>  
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/> 
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+    <application
+        android:hardwareAccelerated="false"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.mr_time.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> 
+         <activity
+            android:name="com.example.mr_time.NeiYeActivity"
+            android:label="@string/app_name" >
+          
+        </activity>
+         <activity
+            android:name="com.example.mr_time.NeiYeNPActivity"
+            android:label="@string/app_name" >
+          
+        </activity>
+         <activity
+            android:name="com.example.mr_time.Jiesuan"
+            android:label="@string/app_name" >
+          
+        </activity>
+        <activity
+            android:name="com.example.mr_time.Settings"
+            android:label="@string/app_name" >
+          
+        </activity>
+        
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"
+              >
+            <intent-filter>
+                <action android:name="android.intent.action.ALARM_RECEIVER" />
+                 <category android:name="android.intent.category.autoalarm" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".AlarmReceiverForAutoWrite"
+            android:enabled="true"
+            android:exported="true"
+              >
+            <intent-filter>
+                <action android:name="android.intent.action.ALARM_RECEIVER" />
+                 <category android:name="android.intent.category.autowrite" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".StartOnStateBarActivity" >  
+        </service>  
+         <service android:name=".AutoWrite" >  
+        </service>  
+         <uses-library android:name="android.test.runner" />
+   		<activity
+		android:name="com.tencent.tauth.AuthActivity"
+		android:noHistory="true"
+		android:launchMode="singleTask" >
+		<intent-filter>
+		<action android:name="android.intent.action.VIEW" />
+		<category android:name="android.intent.category.DEFAULT" />
+		<category android:name="android.intent.category.BROWSABLE" />
+		<data android:scheme="tencent1104505942" />
+		</intent-filter>
+	</activity>
+	<activity 
+	    android:name="com.tencent.connect.common.AssistActivity"
+		android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		android:configChanges="orientation|keyboardHidden|screenSize"
+	/> 
+	
+        
+        
+    </application>
+        
+  
+
+</manifest>

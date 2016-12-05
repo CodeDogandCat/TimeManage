@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ccff"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/dayButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:onClick="openDayActivity"
+        android:src="@drawable/day" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/weekButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dayButton"
+        android:onClick="openWeekActivity"
+        android:src="@drawable/week" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/monthButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:onClick="openMonthActivity"
+        android:src="@drawable/month" />
+
+    <ImageView
+             android:id="@+id/setting"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openSetting"
+        	android:src="@drawable/settingimage"
+           
+            >
+       
+       </ImageView>
+       <ImageView
+             android:id="@+id/exit_image"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="exitApp"
+        	android:src="@drawable/exit"
+           
+          >
+           </ImageView>
+
+       <Button
+           android:id="@+id/button1"
+           style="?android:attr/buttonStyleSmall"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:layout_marginTop="270dp"
+           android:background="#00ccff"
+           android:text="MORE"
+           android:onClick="OpenMore"
+           android:textColor="#FFFFFF"
+           android:textSize="12sp"
+           android:textStyle="normal|bold" />
+      
+		<ImageView
+		    android:layout_width="50dp"
+		    android:layout_height="268dp"
+		    android:layout_alignParentLeft="true"
+		    >
+       
+       </ImageView>
+       
+
+</LinearLayout>

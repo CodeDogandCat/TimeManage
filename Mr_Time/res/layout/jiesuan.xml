@@ -1,0 +1,217 @@
+
+<com.example.mr_time.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingLayout_3"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    >
+       <!-- 第一页 -->
+      <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#00ccff"
+        android:visibility="invisible" 
+       >
+
+       <ImageView
+             android:id="@+id/dayButton_3"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openDayActivity"
+        	android:src="@drawable/day"
+             >
+           
+        </ImageView>
+         <ImageView
+             android:id="@+id/weekButton_3"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openWeekActivity"
+        	android:src="@drawable/week"
+        	android:layout_below="@id/dayButton_3"
+             >
+           
+        </ImageView>
+         <ImageView
+             android:id="@+id/monthButton_3"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openMonthActivity"
+        	android:src="@drawable/month"
+           android:layout_below="@id/weekButton_3"
+             >
+            </ImageView>
+             <ImageView
+             android:id="@+id/setting_3"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="openSetting"
+        	android:src="@drawable/settingimage"
+            android:layout_below="@id/monthButton_3"
+            >
+       
+       </ImageView>
+       <ImageView
+             android:id="@+id/exit_image_3"
+             android:layout_width="50dp"
+        	 android:layout_height="50dp"
+        	 android:layout_alignParentLeft="true"
+        	android:onClick="exitApp"
+        	android:src="@drawable/exit"
+        	 android:layout_below="@id/setting_3"
+           
+          ></ImageView>
+        
+         
+            
+       
+    </RelativeLayout>
+
+      <LinearLayout
+          android:id="@+id/content_3"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:background="@drawable/jie_suan"
+          android:orientation="vertical" 
+           android:layout_alignParentRight="true">
+
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1.2"
+              android:orientation="horizontal" 
+              
+              >
+
+              <Button
+                  android:id="@+id/menuButton_3"
+                  android:layout_width="35dp"
+                  android:layout_height="34dp"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginTop="3dp"
+                  android:background="@drawable/menu"
+                  android:onClick="openmenu"
+                  android:paddingLeft="7dp"
+                  android:paddingTop="2dp" />
+
+              <TextView
+                  android:id="@+id/textView1_3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="75dp"
+                  android:paddingTop="13dp"
+                  android:text="@string/kind_week"
+                  android:textColor="#FFFFFF"
+                  android:textSize="16sp" />
+
+          </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                 android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="vertical" >
+		        <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                 	android:orientation="vertical"
+                    android:layout_weight="2" 
+                    android:gravity="center">
+
+			     	 <ImageView
+			     	     android:id="@+id/bingtu"
+			     	     android:layout_width="200dp"
+			     	     android:layout_height="200dp"
+			     	    
+			     	     android:layout_marginTop="2dp" 
+			     	     android:layout_gravity="center"/>
+
+		     	</LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="164dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="120dp"
+                   
+                    android:orientation="vertical"
+                     android:layout_weight="0.94" >
+
+                    <TextView
+                        android:id="@+id/shuimian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/shuimian"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/cha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.95"
+                        android:text="@string/cha"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/zhong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.92"
+                        android:text="@string/zhong"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/gao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.6"
+                        android:text="@string/gao"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textSize="16sp"
+                        android:textStyle="bold|normal" />
+
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                   
+                    android:orientation="vertical"
+                     android:layout_weight="0.6" >
+                 </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" 
+                android:gravity="center" >
+
+               <ImageView
+                    android:id="@+id/shareImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                   	android:onClick="shareToQQ"
+                    android:src="@drawable/sharenei" /> 
+
+             
+
+            </LinearLayout>
+
+      </LinearLayout>
+
+</com.example.mr_time.SlidingLayout>

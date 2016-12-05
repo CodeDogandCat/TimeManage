@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mr_Time</string>
+    <string name="hello_world"></string>
+    <string name="action_settings">Settings</string>
+    <string name="help">说明:</string>
+    <string name="helpcontent">
+蓝色代表睡眠时间，绿色代表高效时间，黄色代表一般时间，红色代表低效时间，您可以左右滑动颜色块，然后选择你的实际效率水平，点击它来保存</string>
+     <string name="kind_week">This Week</string>
+     <string name="kind_month">This Month</string>
+     <string name="shuimian">睡眠时间  >>>53%</string>
+     <string name="cha">低级效率>>>8%</string>
+     <string name="zhong">中级效率>>>32%</string>
+     <string name="gao">高级效率>>>7%</string>
+     <string name="sharebutton">Let us share to QQ</string>
+     <string name="zidongtishi">自动提示</string>
+     <string name="yes">run</string>
+     <string name="no">stop</string>
+     <string name="shi">hour</string>
+     <string name="fen">min</string>
+     <string name="shimoren">8</string>
+     <string name="fenmoren">0</string>
+     <string name="warningforweekjiesuan">对不起，由于您上周的效率信息不存在或者不完整，查询失败</string>
+     <string name="warningformonthjiesuan">对不起，由于您上月的效率信息不存在或者不完整，查询失败</string>
+      <string name="tuichu">退出应用</string>
+      <string name="qq">分享给QQ好友</string>
+      <string name="qqZone">分享到QQ空间</string>
+      <string name="MenuShare">MenuShare</string>
+      <string name="OpenMore">请联系-“名声很响亮”制作团队</string>
+      <string name="WritePicResult">文件缺失</string>
+      <string name="warnning">文件缺失,请重启应用</string>
+      <string name="warnningWhenRunAlarm">应用会自动提醒您记录您的效率等级情况(如果您的闹钟时间早于当前时间，会立刻振动提醒)</string>
+      <string name="warnningWhenHourOverflow">小时要在1~24之间</string>
+      <string name="warnningWhenMinOverflow">分钟要在0~59之间</string>
+      <string name="warnningWhenAlarmNull">时、分都不能空</string>
+      <string name="stopAlarm">应用已停止自动提醒</string>
+       <string name="warnWhenNullShare">对不起，由于您的效率信息不存在或者不完整，分享失败</string>
+       
+       
+
+</resources>
